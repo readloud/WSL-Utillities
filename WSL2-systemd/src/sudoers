@@ -1,0 +1,6 @@
+Defaults env_keep += WSL_DISTRO_NAME
+Defaults env_keep += WSL_INTEROP
+Defaults env_keep += WSL_SYSTEMD_EXECUTION_ARGS
+Defaults env_keep += DISPLAY
+Defaults env_keep += HOME
+%sudo ALL=(root) NOPASSWD: /bin/sh /etc/profile.d/00-wsl2-systemd.sh

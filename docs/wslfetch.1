@@ -1,0 +1,74 @@
+.TH "WSLFETCH" "1" "DATEPLACEHOLDER" "VERSIONPLACEHOLDER" "WSL Utilities User Manual"
+.SH NAME
+.B wslfetch
+- Component of WSL Utilities
+.SH SYNOPSIS
+.B wslfetch
+.RB [ \-hvcg ]
+.RB [ \-t 
+.IR THEME ]
+.RB [ \-o 
+.IR OPTIONS ]
+.SH DESCRIPTION
+This is a WSL Screenshot Information Tool to print information in a elegant way.
+.SH OPTIONS
+.TP
+.B -h, --help
+print a simple help.
+.TP
+.B -v, --version
+print current version.
+.TP
+.B -c, --colorbar
+add a colorbar to the printed information. This can also be set with the configuration \fIWSLFETCH_COLORBAR\fR.
+.TP
+.B -g, --generic
+Force to print information with generic WSL logo.
+.TP
+.B -t, --theme \fITHEME\fR
+set a custom theme from the file \fITHEME\fR. This can also be set with the configuration \fIWSLFETCH_THEME_PATH\fR.
+.TP
+.B -o, --options \fIOPTIONS\fR
+set custom options from the file \fIOPTIONS\fR. Please refer to the WSLFETCH_INFO_SECTION in the CONFIGURATION section for more information.
+.SH CONFIGURATION
+.TP
+.B WSLFETCH_INFO_SECTION
+the sections of info from wslsys to show in wslfetch. the following are all the available options:
+.nf
+.in +4n
+windows-install-date
+windows-rel-branch
+windows-build
+windows-full-build
+display-scaling
+windows-locale
+windows-theme
+windows-uptime
+wsl-uptime
+wsl-release
+wsl-kernel
+wsl-package-count
+wsl-ip
+.in
+.TP
+\'wsl-version\' will be always ignored since it is builtin in wslfetch. The default value is "windows-build,windows-rel-branch,wsl-release,wsl-kernel,windows-uptime".
+.fi
+.TP
+.B WSLFETCH_THEME_PATH
+This allows you to use your own customized theme.
+.TP
+.B WSLFETCH_COLORBAR
+whether you want to display colorbar in wslfetch. This will override \`\-c, \-\-colorbar\` param.
+.SH AUTHOR
+Created by Patrick Wu <me@patrickwu.space>
+.SH REPORTING BUGS
+Report bugs to <https://github.com/wslutilities/wslu/issues>;
+For Ubuntu specific/related bugs, report to <https://bugs.launchpad.net/ubuntu/+source/wslu>.
+.SH COPYRIGHT
+This is free software; you can redistribute it and/or modify it under
+the terms of the GNU GPL version 3 or (at your option) any later
+version.
+There is NO warranty; not even MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+.SH SEE ALSO
+wslsys(1), wslu(7)
